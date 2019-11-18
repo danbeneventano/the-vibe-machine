@@ -41,8 +41,8 @@
                                 :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.VIDEOS_MISC"/>
                     <v-checkbox class="pr-2" color="black" v-model="$root.selectedCategories" :value="categories.WEBSITE" :label="categories.WEBSITE"
                                 :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.WEBSITE"/>
-                    <v-checkbox class="pr-2" color="black" v-model="$root.selectedCategories" :value="categories.ARTWORK" :label="categories.ARTWORK"
-                                :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.ARTWORK"/>
+                    <!--<v-checkbox class="pr-2" color="black" v-model="$root.selectedCategories" :value="categories.ARTWORK" :label="categories.ARTWORK"
+                                :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.ARTWORK"/>-->
                 </v-row>
 
                 <v-btn outlined rounded fixed bottom left @click="$root.fullscreen = true" v-show="isWebsite">Enter Fullscreen</v-btn>

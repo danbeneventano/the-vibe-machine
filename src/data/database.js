@@ -1,5 +1,5 @@
 import {websites} from "./websites";
-import {artwork} from "./artwork";
+//import {artwork} from "./artwork";
 import {music_songs} from "./music_songs";
 import {music_albums} from "./music_albums";
 import {music_videos} from "./music_videos";
@@ -31,9 +31,9 @@ String.prototype.hashCode = function(seed = 0) {
 const shuffledItems = shuffle(
     websites.map(url => {
         return {type: Categories.WEBSITE, url: url }
-    }).concat(artwork.map(url => {
+    })/*.concat(artwork.map(url => {
         return {type: Categories.ARTWORK, url: url }
-    })).concat(music_songs.map(url => {
+    }))*/.concat(music_songs.map(url => {
         return {type: Categories.MUSIC_SONG, url: url }
     })).concat(music_albums.map(url => {
         return {type: Categories.MUSIC_ALBUM, url: url }

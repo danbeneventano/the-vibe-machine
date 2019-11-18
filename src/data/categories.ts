@@ -4,5 +4,5 @@ export enum Categories {
     MUSIC_ALBUM = "Albums (Spotify)",
     VIDEOS_MISC = "Videos (Misc.)",
     WEBSITE = "Interactive Entertainment",
-    ARTWORK = "Artwork"
+    //ARTWORK = "Artwork"
 }

@@ -1,6 +1,6 @@
 <template>
-    <v-img :src="url" v-if="isArtwork" />
-    <vue-friendly-iframe id="player" frameborder="0" :class="clazz" :src="url" ref="frame" v-else />
+    <!--<v-img :src="url" v-if="isArtwork" />-->
+    <vue-friendly-iframe id="player" frameborder="0" :class="clazz" :src="url" ref="frame" />
 </template>
 
 <script>
@@ -91,7 +91,8 @@ export default {
             return this.item.type === Categories.WEBSITE
         },
         isArtwork() {
-            return this.item.type === Categories.ARTWORK
+            //return this.item.type === Categories.ARTWORK
+            return false
         },
         isSpotify() {
             return this.item.type === Categories.MUSIC_SONG || this.item.type === Categories.MUSIC_ALBUM
@@ -140,7 +141,7 @@ export default {
 <style scoped>
     .spotifyFrame >>> iframe {
         width: 100%;
-        height: 500px;
+        height: 100%;
     }
 
     .youtubeFrame >>> iframe {
