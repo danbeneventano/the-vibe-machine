@@ -3,8 +3,8 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
+        "serve": "vue-cli-service serve src/main.js",
+        "build": "vue-cli-service build src/main.js",
         "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then yarn run build ; fi ",
         "start": "node server/server.js"
     },
