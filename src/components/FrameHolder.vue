@@ -20,6 +20,7 @@ export default {
     mounted() {
         if (this.isYouTube) {
             this.player = YouTubePlayer("player")
+            this.player.setOption({ playerVars: { start: 0 } })
             this.player.setSize(1280, 720)
             this.player.loadVideoByUrl(this.youtubeUrl)
             this.player.on('stateChange', event => {
