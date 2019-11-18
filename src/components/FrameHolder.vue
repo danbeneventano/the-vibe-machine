@@ -1,6 +1,6 @@
 <template>
     <v-img :src="url" v-if="isArtwork" />
-    <vue-friendly-iframe :style="style" id="player" frameborder="0" :class="clazz" :src="url" ref="frame" v-else />
+    <vue-friendly-iframe id="player" frameborder="0" :class="clazz" :src="url" ref="frame" v-else />
 </template>
 
 <script>
@@ -78,11 +78,11 @@ export default {
         },
         width() {
             if (this.isSpotify) return "500"
-            else return "1280"
+            else return window.screen.width * .75
         },
         height() {
             if (this.isSpotify) return "500"
-            else return "720"
+            else return window.screen.height * .75
         },
         isYouTube() {
             return this.item.type === Categories.MUSIC_VIDEO || this.item.type === Categories.VIDEOS_MISC
@@ -139,13 +139,13 @@ export default {
 
 <style scoped>
     .spotifyFrame >>> iframe {
-        width: 500px;
+        width: 100%;
         height: 500px;
     }
 
     .youtubeFrame >>> iframe {
-        width: 1280px;
-        height: 720px;
+        width: 100%;
+        height: 100%;
     }
 
     .fullscreen >>> iframe {
@@ -163,7 +163,7 @@ export default {
     }
 
     .notfullscreen >>> iframe {
-        width: 1280px;
-        height: 720px;
+        width: 100%;
+        height: 100%;
     }
 </style>

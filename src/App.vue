@@ -2,7 +2,7 @@
     <v-app>
         <v-content>
             <vanta effect="fog" class="fill-height" :enabled="backgroundEnabled">
-                <v-row align="center" justify="space-between">
+                <v-row align="center" justify="space-between" class="fill-height">
                     <v-btn icon x-large color="black" @click="$root.back" >
                         <v-icon>mdi-chevron-left</v-icon>
                     </v-btn>
@@ -16,7 +16,7 @@
 &ndash;&gt;
                     </v-col>-->
 
-                    <router-view/>
+                    <router-view style="width: 66.666%; height: 78.52%" />
 
 
                     <!--<keep-alive>
