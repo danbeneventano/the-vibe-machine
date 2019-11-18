@@ -62,9 +62,6 @@ import itemMap from "./data/database";
 export default Vue.extend({
     name: 'App',
     components: {
-        Artwork,
-        Website,
-        YouTube,
         Vanta
     },
     data() {
