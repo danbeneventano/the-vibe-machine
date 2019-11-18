@@ -1,26 +1,14 @@
 <template>
     <v-img :src="url" v-if="isArtwork" />
     <vue-friendly-iframe :style="style" id="player" frameborder="0" :class="clazz" :src="url" ref="frame" v-else />
-
-    <!--<div>
-        <div style="width: 1280px; height: 720px" id="player" v-if="isYouTube" />
-        <Artwork :item="item" v-if="isArtwork" />
-        <Spotify :item="item" v-if="isSpotify" />
-        <Website :item="item" v-if="isWebsite" />
-    </div>-->
-
 </template>
 
 <script>
 import {Categories} from "../data/categories";
 import YouTubePlayer from 'youtube-player';
-import Spotify from "./Spotify";
-import Website from "./Website";
-import Artwork from "./Artwork";
 
 export default {
     name: "FrameHolder",
-    components: {Artwork, Website, Spotify},
     props: {
         item: Object
     },

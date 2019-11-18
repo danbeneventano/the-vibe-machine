@@ -3,14 +3,10 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify';
 import VueRouter from 'vue-router'
 import VueFriendlyIframe from 'vue-friendly-iframe';
-import VuePlayerPlugin from 'vue-youtube-iframe-api'
-import VueYoutube from 'vue-youtube'
 import itemMap from "./data/database";
 import {Categories} from "./data/categories";
 import FrameHolder from "./components/FrameHolder";
 
-Vue.use(VueYoutube)
-Vue.use(VuePlayerPlugin)
 Vue.use(VueRouter)
 
 Vue.component('vue-friendly-iframe', VueFriendlyIframe);

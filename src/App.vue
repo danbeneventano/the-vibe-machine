@@ -56,9 +56,6 @@
 <script>
 import Vue from 'vue';
 import Vanta from './components/Vanta.vue'
-import YouTube from "./components/YouTubeContainer";
-import Website from "./components/Website";
-import Artwork from "./components/Artwork";
 import {Categories} from "./data/categories";
 import itemMap from "./data/database";
 
