@@ -1,6 +1,6 @@
 <template>
     <!--<v-img :src="url" v-if="isArtwork" />-->
-    <vue-friendly-iframe id="player" frameborder="0" :class="clazz" :src="url" ref="frame" />
+    <vue-friendly-iframe id="player" frameborder="0" allowfullscreen allow="autoplay; fullscreen" :class="clazz" :src="url" ref="frame" />
 </template>
 
 <script>
