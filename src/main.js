@@ -19,7 +19,10 @@ const routes = [
     { path: '/:hash',
         component: FrameHolder,
         props: (route) => {
-            return { item: itemMap.get(Number(route.params.hash)) }
+            return {
+                item: itemMap.get(Number(route.params.hash)),
+                index: [...itemMap.keys()].indexOf(Number(route.params.hash))
+            }
         }
     },
     { path: '', redirect: `/${randomHash}` }

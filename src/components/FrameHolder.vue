@@ -10,7 +10,8 @@ import YouTubePlayer from 'youtube-player';
 export default {
     name: "FrameHolder",
     props: {
-        item: Object
+        item: Object,
+        index: Number
     },
     data() {
         return {
@@ -18,6 +19,7 @@ export default {
         }
     },
     mounted() {
+        if (this.index) this.$root.selectedIndex = this.index
         if (this.isYouTube) {
             this.player = YouTubePlayer("player")
             this.player.setOption({ playerVars: { start: 0 } })
@@ -134,6 +136,10 @@ export default {
                     elem.msRequestFullscreen();
                 }
             }
+        },
+        index: function(val) {
+            console.log("yup")
+            this.$root.selectedIndex = val
         }
     }
 }
