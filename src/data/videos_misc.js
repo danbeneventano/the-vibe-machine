@@ -102,7 +102,9 @@ export const videos_misc = [
     "https://www.youtube.com/watch?v=GURvHJNmGrc&list=PLXwF9KsnmO1lPoOijO06vm9GIVm-kekcg&index=34",
     "https://www.youtube.com/watch?v=W5SwtGYeB9M&list=PLXwF9KsnmO1lPoOijO06vm9GIVm-kekcg&index=35",
     "https://www.youtube.com/watch?v=fkfXyOemTO4&list=PLXwF9KsnmO1lPoOijO06vm9GIVm-kekcg&index=44",
-
+    "https://www.youtube.com/watch?v=l8NHebm4nTY&list=PLXwF9KsnmO1lPoOijO06vm9GIVm-kekcg&index=36",
+    "https://www.youtube.com/watch?v=KgzQuE1pR1w",
+    "https://www.youtube.com/watch?v=XoacbEcvmYo",
 
 
 ]
