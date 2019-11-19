@@ -39,11 +39,11 @@
                                 : $root.selectedCategories.push(categories.MUSIC_ALBUM)"
                         >
                             <v-list-item-action>
-                                <v-checkbox color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_ALBUM"
+                                <v-checkbox @click="" color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_ALBUM"
                                             :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_ALBUM"/>
                             </v-list-item-action>
                             <v-list-item-title>
-                                {{categories.MUSIC_ALBUM}}
+                                {{categories.MUSIC_ALBUM}} [{{albumCount}}]
                             </v-list-item-title>
                         </v-list-item>
 
@@ -53,11 +53,11 @@
                                 : $root.selectedCategories.push(categories.MUSIC_SONG)"
                         >
                             <v-list-item-action>
-                                <v-checkbox color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_SONG"
+                                <v-checkbox @click="" color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_SONG"
                                             :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_SONG"/>
                             </v-list-item-action>
                             <v-list-item-title>
-                                {{categories.MUSIC_SONG}}
+                                {{categories.MUSIC_SONG}} [{{songCount}}]
                             </v-list-item-title>
                         </v-list-item>
 
@@ -67,11 +67,11 @@
                                 : $root.selectedCategories.push(categories.MUSIC_VIDEO)"
                         >
                             <v-list-item-action>
-                                <v-checkbox color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_VIDEO"
+                                <v-checkbox @click="" color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_VIDEO"
                                             :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_VIDEO"/>
                             </v-list-item-action>
                             <v-list-item-title>
-                                {{categories.MUSIC_VIDEO}}
+                                {{categories.MUSIC_VIDEO}} [{{musicVideoCount}}]
                             </v-list-item-title>
                         </v-list-item>
 
@@ -81,11 +81,11 @@
                                 : $root.selectedCategories.push(categories.VIDEOS_MISC)"
                         >
                             <v-list-item-action>
-                                <v-checkbox color="black" v-model="$root.selectedCategories" :value="categories.VIDEOS_MISC"
+                                <v-checkbox @click="" color="black" v-model="$root.selectedCategories" :value="categories.VIDEOS_MISC"
                                             :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.VIDEOS_MISC"/>
                             </v-list-item-action>
                             <v-list-item-title>
-                                {{categories.VIDEOS_MISC}}
+                                {{categories.VIDEOS_MISC}} [{{miscVideosCount}}]
                             </v-list-item-title>
                         </v-list-item>
 
@@ -95,11 +95,11 @@
                                 : $root.selectedCategories.push(categories.WEBSITE)"
                         >
                             <v-list-item-action>
-                                <v-checkbox color="black" v-model="$root.selectedCategories" :value="categories.WEBSITE"
+                                <v-checkbox @click="" color="black" v-model="$root.selectedCategories" :value="categories.WEBSITE"
                                             :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.WEBSITE"/>
                             </v-list-item-action>
                             <v-list-item-title>
-                                {{categories.WEBSITE}}
+                                {{categories.WEBSITE}} [{{websiteCount}}]
                             </v-list-item-title>
                         </v-list-item>
                     </v-list>
@@ -133,6 +133,11 @@ import Vue from 'vue';
 import Vanta from './components/Vanta.vue'
 import {Categories} from "./data/categories";
 import itemMap from "./data/database";
+import {music_albums} from "./data/music_albums";
+import {music_songs} from "./data/music_songs";
+import {music_videos} from "./data/music_videos";
+import {videos_misc} from "./data/videos_misc";
+import {websites} from "./data/websites";
 
 export default Vue.extend({
     name: 'App',
@@ -155,6 +160,21 @@ export default Vue.extend({
         },
         isWebsite() {
             return itemMap.get(Number(this.$route.params.hash)).type === Categories.WEBSITE
+        },
+        albumCount() {
+            return music_albums.length
+        },
+        songCount() {
+            return music_songs.length
+        },
+        musicVideoCount() {
+            return music_videos.length
+        },
+        miscVideosCount() {
+            return videos_misc.length
+        },
+        websiteCount() {
+            return websites.length
         }
     },
     watch: {
