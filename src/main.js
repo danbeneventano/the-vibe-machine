@@ -22,7 +22,8 @@ const routes = [
             return { item: itemMap.get(Number(route.params.hash)) }
         }
     },
-    { path: '', redirect: `/${randomHash}` }
+    { path: '', redirect: `/${randomHash}` },
+    { path: '*', redirect: '' }
 ]
 
 const router = new VueRouter({
