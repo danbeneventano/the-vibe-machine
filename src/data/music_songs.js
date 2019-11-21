@@ -221,4 +221,9 @@ export const music_songs = [
     "https://open.spotify.com/track/0T1JQO6ClldcIFG5CbP4Ie?si=Ysu2KSJsS5SFYQMP5elM8A",
     "https://open.spotify.com/track/7CeyIwdn0M6JhGvHPZstjf?si=KM2xF3tGQg-ZNChKFPohgA",
     "https://open.spotify.com/track/4ZkdFj5vG6uxkLMPOUUWKS?si=SlkaV5nYScuPs6YhOwHkMA",
+    "https://open.spotify.com/track/2R7I5FePBvaTyF6B3iBmeV?si=hxLOWYMoQKK6VGSTYG6wHg",
+    "https://open.spotify.com/track/3ybmOJTwaJY9Wlu1XP1fDv?si=fwDETHLKTDydX_MTwoaYEA",
+    "https://open.spotify.com/track/3cSlU4ZH4wzb5pM7wI1k3f?si=-jKq8-pwRbWL-Uiskhj9zg",
+    "https://open.spotify.com/track/0E9jxLf6Jt9QasvRjTCpkv?si=L5CzX-y6Sr64fj7ywy1pSA",
+    "https://open.spotify.com/track/4XoW0fMU0j0QpTsBBW8Oq5?si=jeFOkkRkQ_eOCyNPH7r2pw",
 ]
