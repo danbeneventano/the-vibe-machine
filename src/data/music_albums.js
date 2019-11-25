@@ -131,6 +131,4 @@ export const music_albums = [
     "https://open.spotify.com/album/1l9d1Zj9Iv2eOcdObVhdMy?si=5YLYv4FgTuqLfbrY9iLYRQ",
     "https://open.spotify.com/album/0zyj1GySC9Cf4u8maD2q9v?si=UttjOPoxRGyr4BYFxryLqg",
     "https://open.spotify.com/album/0U8DeqqKDgIhIiWOdqiQXE?si=JKnnueOcTy-ix9EGwugFIg",
-    "https://open.spotify.com/album/7CYDRyFCKtAYJBSpfovLyX?si=I7dv1DNuQDmA3guOeiOHGg",
-    "https://open.spotify.com/album/3Gt7rOjcZQoHCfnKl5AkK7?si=cS3KAER2QOOU27LJUpLw4A",
 ]

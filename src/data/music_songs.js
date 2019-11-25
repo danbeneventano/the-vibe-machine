@@ -226,4 +226,5 @@ export const music_songs = [
     "https://open.spotify.com/track/3cSlU4ZH4wzb5pM7wI1k3f?si=-jKq8-pwRbWL-Uiskhj9zg",
     "https://open.spotify.com/track/0E9jxLf6Jt9QasvRjTCpkv?si=L5CzX-y6Sr64fj7ywy1pSA",
     "https://open.spotify.com/track/4XoW0fMU0j0QpTsBBW8Oq5?si=jeFOkkRkQ_eOCyNPH7r2pw",
+    "https://open.spotify.com/track/1blbT2vGiqxICPoyxzfVn1?si=T8o4-zf7SNCV9EFnsWTEWA",
 ]

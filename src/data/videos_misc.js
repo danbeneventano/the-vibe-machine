@@ -154,6 +154,10 @@ export const videos_misc = [
     "https://www.youtube.com/watch?v=DFBtdRJm-6g",
     "https://www.youtube.com/watch?v=QZShA_a-5r8",
     "https://www.youtube.com/watch?v=K5CZ74ybnbE",
+    "https://www.youtube.com/watch?v=8O7gNLiaSm0",
+    "https://www.youtube.com/watch?v=ph84DJeq8PM",
+    "https://www.youtube.com/watch?v=nyQdZ0cKKg8",
+
 
 
 ]
