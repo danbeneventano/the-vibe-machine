@@ -3,13 +3,13 @@
         <v-content>
             <vanta effect="fog" class="fill-height" :enabled="backgroundEnabled">
                 <v-row align="center" justify="space-between" class="fill-height">
-                    <v-btn icon x-large color="black" @click="$root.back" >
+                    <v-btn aria-label="Previous Item" icon x-large color="black" @click="$root.back" >
                         <v-icon>mdi-chevron-left</v-icon>
                     </v-btn>
 
                     <router-view style="width: 66.666%; height: 78.52%" />
 
-                    <v-btn icon x-large color="black" @click="$root.next" >
+                    <v-btn aria-label="Next Item" icon x-large color="black" @click="$root.next" >
                         <v-icon>mdi-chevron-right</v-icon>
                     </v-btn>
 
@@ -17,7 +17,7 @@
 
                 <v-menu :close-on-content-click="false">
                     <template v-slot:activator="{ on }">
-                        <v-btn fab fixed bottom right small v-on="on">
+                        <v-btn aria-label="Settings" fab fixed bottom right small v-on="on">
                             <v-icon>mdi-settings</v-icon>
                         </v-btn>
                     </template>
@@ -26,7 +26,7 @@
                                      @click="backgroundEnabled = !backgroundEnabled"
                         >
                             <v-list-item-action>
-                                <v-switch color="black" v-model="backgroundEnabled" @click="backgroundEnabled = !backgroundEnabled" />
+                                <v-switch :aria-label="backgroundEnabled ? 'Disable Background' : 'Enable Background'" color="black" v-model="backgroundEnabled" @click="backgroundEnabled = !backgroundEnabled" />
                             </v-list-item-action>
                             <v-list-item-title>
                                 Background
@@ -40,7 +40,7 @@
                         >
                             <v-list-item-action>
                                 <v-checkbox @click="" color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_ALBUM"
-                                            :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_ALBUM"/>
+                                            :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_ALBUM" :aria-label="categories.MUSIC_ALBUM"/>
                             </v-list-item-action>
                             <v-list-item-title>
                                 {{categories.MUSIC_ALBUM}} [{{albumCount}}]
@@ -54,7 +54,7 @@
                         >
                             <v-list-item-action>
                                 <v-checkbox @click="" color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_SONG"
-                                            :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_SONG"/>
+                                            :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_SONG" :aria-label="categories.MUSIC_SONG"/>
                             </v-list-item-action>
                             <v-list-item-title>
                                 {{categories.MUSIC_SONG}} [{{songCount}}]
@@ -68,7 +68,7 @@
                         >
                             <v-list-item-action>
                                 <v-checkbox @click="" color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_VIDEO"
-                                            :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_VIDEO"/>
+                                            :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_VIDEO" :aria-label="categories.MUSIC_VIDEO"/>
                             </v-list-item-action>
                             <v-list-item-title>
                                 {{categories.MUSIC_VIDEO}} [{{musicVideoCount}}]
@@ -82,7 +82,7 @@
                         >
                             <v-list-item-action>
                                 <v-checkbox @click="" color="black" v-model="$root.selectedCategories" :value="categories.VIDEOS_MISC"
-                                            :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.VIDEOS_MISC"/>
+                                            :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.VIDEOS_MISC" :aria-label="categories.VIDEOS_MISC"/>
                             </v-list-item-action>
                             <v-list-item-title>
                                 {{categories.VIDEOS_MISC}} [{{miscVideosCount}}]
@@ -96,7 +96,7 @@
                         >
                             <v-list-item-action>
                                 <v-checkbox @click="" color="black" v-model="$root.selectedCategories" :value="categories.WEBSITE"
-                                            :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.WEBSITE"/>
+                                            :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.WEBSITE" :aria-label="categories.WEBSITE"/>
                             </v-list-item-action>
                             <v-list-item-title>
                                 {{categories.WEBSITE}} [{{websiteCount}}]
@@ -105,24 +105,7 @@
                     </v-list>
                 </v-menu>
 
-                <!--<v-row align="center" justify="center" class="centered">
-                    <v-checkbox class="pr-2" color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_ALBUM" :label="categories.MUSIC_ALBUM"
-                                :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_ALBUM"/>
-                    <v-checkbox class="pr-2" color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_SONG" :label="categories.MUSIC_SONG"
-                                :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_SONG"/>
-                    <v-checkbox class="pr-2" color="black" v-model="$root.selectedCategories" :value="categories.MUSIC_VIDEO" :label="categories.MUSIC_VIDEO"
-                                :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.MUSIC_VIDEO"/>
-                    <v-checkbox class="pr-2" color="black" v-model="$root.selectedCategories" :value="categories.VIDEOS_MISC" :label="categories.VIDEOS_MISC"
-                                :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.VIDEOS_MISC"/>
-                    <v-checkbox class="pr-2" color="black" v-model="$root.selectedCategories" :value="categories.WEBSITE" :label="categories.WEBSITE"
-                                :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.WEBSITE"/>
-                    &lt;!&ndash;<v-checkbox class="pr-2" color="black" v-model="$root.selectedCategories" :value="categories.ARTWORK" :label="categories.ARTWORK"
-                                :disabled="$root.selectedCategories.length === 1 && $root.selectedCategories[0] === categories.ARTWORK"/>&ndash;&gt;
-                </v-row>-->
-
-                <v-btn outlined rounded fixed bottom left @click="$root.fullscreen = true" v-show="isWebsite">Enter Fullscreen</v-btn>
-
-                <!--<v-btn text fixed bottom right @click="backgroundEnabled = !backgroundEnabled">{{toggleButtonText}}</v-btn>-->
+                <v-btn outlined rounded fixed bottom left @click="$root.fullscreen = true" v-show="isWebsite" :aria-hidden="!isWebsite" aria-label="Enter Fullscreen">Enter Fullscreen</v-btn>
             </vanta>
         </v-content>
     </v-app>
